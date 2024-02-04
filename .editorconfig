@@ -1,0 +1,23 @@
+# This file is for unifying the coding style for different editors and IDEs
+# editorconfig.org
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[Makefile]
+indent_style = tab
+
+[*.{tex,cls,lua}]
+indent_style = space
+indent_size = 3
+
+[*.md]
+trim_trailing_whitespace = false
+
+[LICENSE]
+insert_final_newline = false
