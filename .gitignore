@@ -1,3 +1,4 @@
+# Latex
 *.acn
 *.acr
 *.alg
@@ -31,13 +32,11 @@
 *.xdy
 *.tdo
 *.pdf
+cv-blx.bib
+cv.run.xml
 cv.fls
 cv.texnicle
 cv.texnicle.backup
-.DS_Store
-latex-classicalcv.sublime-project
-latex-classicalcv.sublime-workspace
-sublime-project
 
 # IDE files
 .idea/
@@ -45,7 +44,13 @@ sublime-project
 !.vscode/launch.json
 !.vscode/tasks.json
 .vscode-test
+*.sublime-project
+*.sublime-workspace
+sublime-project
 
 # Misc
 .DS_Store
 .wakatime-project
+
+
+kkrema
