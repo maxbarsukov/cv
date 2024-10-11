@@ -40,7 +40,7 @@
 \RequirePackage{url,parskip}
 \RequirePackage[usenames,dvipsnames]{xcolor}
 \RequirePackage{fullpage}
-\RequirePackage[margin=1.5cm]{geometry}
+\RequirePackage[left=1.5cm,right=1.5cm,top=0.8cm,bottom=1.5cm]{geometry}
 \RequirePackage{fontawesome5} % --> \RequirePackage[fixed]{fontawesome5}
 \RequirePackage{hyperref}
 \RequirePackage{lmodern}
@@ -183,7 +183,7 @@
 \newcommand{\stackexchangeSymbol}{\fBox{StackExchange}}
 \newcommand{\mediumSymbol}{\fBox{Medium}}
 \newcommand{\bitbucketSymbol}{\fBox{Bitbucket}}
-\newcommand{\websiteSymbol}{\faExternalLink*}
+\newcommand{\websiteSymbol}{\makebox[1.25em][l]{\faExternalLink*}}
 \newcommand{\telegramSymbol}{\fBox{Telegram}}
 
 \newcommand\link[2]{\color{linkcolor}\href{#1}{#2}\color{Black} }
@@ -281,10 +281,10 @@
 % Render author's tagline
 \newcommand\resumetitle[1]{
   \ifundef{\@alternative}{
-    \par{
-        \bigskip\center{\Large \color{accentcolor}\textbf{#1}\color{Black}}\par
-    }
-    \bigskip
+	 \par{
+	 	 \bigskip\center{\Large \color{accentcolor}\textbf{#1}\color{Black}}\par
+	 }
+	 \bigskip
   }{
     \color{accentcolor}\textbf{\large{#1}}\color{black}
   }
@@ -323,6 +323,7 @@
     }
     \user{\@firstname}{\@lastname}\\
     \resumetitle{\@tagline}
+    \vspace{0.5em}
     \smallskip\\
     \small{\@socialinfo}
     \end{minipage}
@@ -409,11 +410,11 @@
 %                    }
 %                    {<Technology list>}
 \newcommand\experience[7]{
-  \textbf{#1}    & \textbf{#2, \textsc{#3}, #4}                           \\*
+  \textbf{#1}    & \textbf{#2, \textsc{#3}}, #4   								\\*
   \textbf{#5}    & \begin{minipage}[t]{\rightcolumnlength}
-                          #6
-                   \end{minipage}                              \\*
-                 & \footnotesize{\foreach \n in {#7}{\cvtag{\n}}}    \\
+  					         #6
+                   \end{minipage}										\\*
+                 & \footnotesize{\foreach \n in {#7}{\cvtag{\n}}} 	\\
   }
 
 % Render a consultant experience in the experiences environment
@@ -426,12 +427,12 @@
 %                    }
 %                    {<Technology list>}
 \newcommand\consultantexperience[9]{
-  \textbf{#1}    & \textbf{#2, \textsc{#3}, #4}                           \\*
-  \textbf{#5}    & \emph{#6} pour \textsc{#7}                                   \\*
-                   & \begin{minipage}[t]{\rightcolumnlength}
-                            #8
-                      \end{minipage}                              \\*
-                 & \footnotesize{\foreach \n in {#9}{\cvtag{\n}}}    \\
+  \textbf{#1}    & \textbf{#2, \textsc{#3}, #4}   								\\*
+  \textbf{#5}    & \emph{#6} pour \textsc{#7}                       				\\*
+  				     & \begin{minipage}[t]{\rightcolumnlength}
+  						        #8
+                   	\end{minipage}										\\*
+                 & \footnotesize{\foreach \n in {#9}{\cvtag{\n}}} 	\\
   }
 
 % Define the empty separator macro
@@ -453,7 +454,7 @@
 %   {<techno1>,<techno2>}
 \newcommand\project[5]{
   \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
-    \textbf{\textsc{#1}} \hfill \textsc{#2}\smallskip\\
+    \textbf{#1} \hfill \textsc{#2}\smallskip\\
     #3\\
     #4\smallskip\\
     \footnotesize{\foreach \n in {#5}{\cvtag{\n}}}\\
