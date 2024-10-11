@@ -1,0 +1,21 @@
+name: Build LaTeX document
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v3
+
+      - name: Latex installation
+        run: sudo apt-get -qq update && apt-get install -y --no-install-recommends latexmk texlive-fonts-extra texlive-fonts-recommended texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-luatex texlive-xetex texlive-pictures texlive-lang-cyrillic texlive-bibtex-extra biber lmodern fonts-font-awesome
+
+      - name: Compile LaTeX document
+        run: make
+
+      - name: Upload PDF file
+        uses: actions/upload-artifact@v3
+        with:
+          name: CV
+          path: out/cv.pdf
