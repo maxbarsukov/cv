@@ -1,0 +1,295 @@
+% taken from xecyr.sty
+%%% Cyrillic letter TeX definitions for XeTeX (and LuaTeX)
+% This definition set is complete for all Slavic Cyrillic
+% languages (Russian, Ukrainian, Belorussian,
+% Rusyn, Serbian, Macedonian and Bulgarian alphabets).
+%
+% It has not been confirmed as complete, but might be, for those
+% non-Slavic Cyrillic languages:
+% Ossetian, Khalka, Buryat, Kalmyk, Kyrgyz, Tatar, Uzbek
+% Azerbaijani, Kazakh, Abkhaz, Chukchi.
+
+%%% Part I
+%%% Cyrillic letters defined as a continuous stretch
+%%% in Unicode and most common 8-bit encodings which define them:
+
+\DeclareTextSymbol{\CYRA}\UnicodeEncodingName{"0410}        % А
+\DeclareTextSymbol{\cyra}\UnicodeEncodingName{"0430}        % а
+\DeclareTextSymbol{\CYRB}\UnicodeEncodingName{"0411}        % Б
+\DeclareTextSymbol{\cyrb}\UnicodeEncodingName{"0431}        % б
+\DeclareTextSymbol{\CYRV}\UnicodeEncodingName{"0412}        % В
+\DeclareTextSymbol{\cyrv}\UnicodeEncodingName{"0432}        % в
+\DeclareTextSymbol{\CYRG}\UnicodeEncodingName{"0413}        % Г
+\DeclareTextSymbol{\cyrg}\UnicodeEncodingName{"0433}        % г
+\DeclareTextSymbol{\CYRD}\UnicodeEncodingName{"0414}        % Д
+\DeclareTextSymbol{\cyrd}\UnicodeEncodingName{"0434}        % д
+\DeclareTextSymbol{\CYRE}\UnicodeEncodingName{"0415}        % Е
+\DeclareTextSymbol{\cyre}\UnicodeEncodingName{"0435}        % е
+\DeclareTextSymbol{\CYRZH}\UnicodeEncodingName{"0416}       % Ж
+\DeclareTextSymbol{\cyrzh}\UnicodeEncodingName{"0436}       % ж
+\DeclareTextSymbol{\CYRZ}\UnicodeEncodingName{"0417}        % З
+\DeclareTextSymbol{\cyrz}\UnicodeEncodingName{"0437}        % з
+\DeclareTextSymbol{\CYRI}\UnicodeEncodingName{"0418}        % И
+\DeclareTextSymbol{\cyri}\UnicodeEncodingName{"0438}        % и
+\DeclareTextSymbol{\CYRISHRT}\UnicodeEncodingName{"0419}    % Й
+\DeclareTextSymbol{\cyrishrt}\UnicodeEncodingName{"0439}    % й
+\DeclareTextSymbol{\CYRK}\UnicodeEncodingName{"041A}        % К
+\DeclareTextSymbol{\cyrk}\UnicodeEncodingName{"043A}        % к
+\DeclareTextSymbol{\CYRL}\UnicodeEncodingName{"041B}        % Л
+\DeclareTextSymbol{\cyrl}\UnicodeEncodingName{"043B}        % л
+\DeclareTextSymbol{\CYRM}\UnicodeEncodingName{"041C}        % М
+\DeclareTextSymbol{\cyrm}\UnicodeEncodingName{"043C}        % м
+\DeclareTextSymbol{\CYRN}\UnicodeEncodingName{"041D}        % Н
+\DeclareTextSymbol{\cyrn}\UnicodeEncodingName{"043D}        % н
+\DeclareTextSymbol{\CYRO}\UnicodeEncodingName{"041E}        % О
+\DeclareTextSymbol{\cyro}\UnicodeEncodingName{"043E}        % о
+\DeclareTextSymbol{\CYRP}\UnicodeEncodingName{"041F}        % П
+\DeclareTextSymbol{\cyrp}\UnicodeEncodingName{"043F}        % п
+\DeclareTextSymbol{\CYRR}\UnicodeEncodingName{"0420}        % Р
+\DeclareTextSymbol{\cyrr}\UnicodeEncodingName{"0440}        % р
+\DeclareTextSymbol{\CYRS}\UnicodeEncodingName{"0421}        % С
+\DeclareTextSymbol{\cyrs}\UnicodeEncodingName{"0441}        % с
+\DeclareTextSymbol{\CYRT}\UnicodeEncodingName{"0422}        % Т
+\DeclareTextSymbol{\cyrt}\UnicodeEncodingName{"0442}        % т
+\DeclareTextSymbol{\CYRU}\UnicodeEncodingName{"0423}        % У
+\DeclareTextSymbol{\cyru}\UnicodeEncodingName{"0443}        % у
+\DeclareTextSymbol{\CYRF}\UnicodeEncodingName{"0424}        % Ф
+\DeclareTextSymbol{\cyrf}\UnicodeEncodingName{"0444}        % ф
+\DeclareTextSymbol{\CYRH}\UnicodeEncodingName{"0425}        % Х
+\DeclareTextSymbol{\cyrh}\UnicodeEncodingName{"0445}        % х
+\DeclareTextSymbol{\CYRC}\UnicodeEncodingName{"0426}        % Ц
+\DeclareTextSymbol{\cyrc}\UnicodeEncodingName{"0446}        % ц
+\DeclareTextSymbol{\CYRCH}\UnicodeEncodingName{"0427}       % Ч
+\DeclareTextSymbol{\cyrch}\UnicodeEncodingName{"0447}       % ч
+\DeclareTextSymbol{\CYRSH}\UnicodeEncodingName{"0428}       % Ш
+\DeclareTextSymbol{\cyrsh}\UnicodeEncodingName{"0448}       % ш
+\DeclareTextSymbol{\CYRSHCH}\UnicodeEncodingName{"0429}     % Щ
+\DeclareTextSymbol{\cyrshch}\UnicodeEncodingName{"0449}     % щ
+\DeclareTextSymbol{\CYRHRDSN}\UnicodeEncodingName{"042A}    % Ъ
+\DeclareTextSymbol{\cyrhrdsn}\UnicodeEncodingName{"044A}    % ъ
+\DeclareTextSymbol{\CYRERY}\UnicodeEncodingName{"042B}      % Ы
+\DeclareTextSymbol{\cyrery}\UnicodeEncodingName{"044B}      % ы
+\DeclareTextSymbol{\CYRSFTSN}\UnicodeEncodingName{"042C}    % Ь
+\DeclareTextSymbol{\cyrsftsn}\UnicodeEncodingName{"044C}    % ь
+\DeclareTextSymbol{\CYREREV}\UnicodeEncodingName{"042D}     % Э
+\DeclareTextSymbol{\cyrerev}\UnicodeEncodingName{"044D}     % э
+\DeclareTextSymbol{\CYRYU}\UnicodeEncodingName{"042E}       % Ю
+\DeclareTextSymbol{\cyryu}\UnicodeEncodingName{"044E}       % ю
+\DeclareTextSymbol{\CYRYA}\UnicodeEncodingName{"042F}       % Я
+\DeclareTextSymbol{\cyrya}\UnicodeEncodingName{"044F}       % я
+
+%%% Part II
+%%% Cyrillic letters not defined as continuous stretches,
+%%% but available in common 8-bit cyrillic encodings,
+%%% like cp1251 and iso-8859-5, sorted by languages
+%%% they're used in for ease of checking:
+
+% Common to many languages:
+\DeclareTextSymbol{\CYRYO}\UnicodeEncodingName{"0401}       % Ё
+\DeclareTextSymbol{\cyryo}\UnicodeEncodingName{"0451}       % ё
+% Belorussian-Uzbek:
+\DeclareTextSymbol{\CYRUSHRT}\UnicodeEncodingName{"040E}    % Ў
+\DeclareTextSymbol{\cyrushrt}\UnicodeEncodingName{"045E}    % ў
+% Ukrainian-Rusyn:
+\DeclareTextSymbol{\CYRGUP}\UnicodeEncodingName{"0490}      % Ґ
+\DeclareTextSymbol{\cyrgup}\UnicodeEncodingName{"0491}      % ґ
+\DeclareTextSymbol{\CYRYI}\UnicodeEncodingName{"0407}       % Ї
+\DeclareTextSymbol{\cyryi}\UnicodeEncodingName{"0457}       % ї
+\DeclareTextSymbol{\CYRIE}\UnicodeEncodingName{"0404}       % Є
+\DeclareTextSymbol{\cyrie}\UnicodeEncodingName{"0454}       % є
+% Ukrainian-Belorussian-Rusyn-Kazakh:
+\DeclareTextSymbol{\CYRII}\UnicodeEncodingName{"0406}       % І
+\DeclareTextSymbol{\cyrii}\UnicodeEncodingName{"0456}       % і
+% Serbian-Macedonian-Azerbaijani:
+\DeclareTextSymbol{\CYRJE}\UnicodeEncodingName{"0408}       % Ј
+\DeclareTextSymbol{\cyrje}\UnicodeEncodingName{"0458}       % ј
+% Serbian-Macedonian-Abkhaz:
+\DeclareTextSymbol{\CYRDZHE}\UnicodeEncodingName{"040F}     % Џ
+\DeclareTextSymbol{\cyrdzhe}\UnicodeEncodingName{"045F}     % џ
+% Serbian-Macedonian:
+\DeclareTextSymbol{\CYRLJE}\UnicodeEncodingName{"0409}      % Љ
+\DeclareTextSymbol{\cyrlje}\UnicodeEncodingName{"0459}      % љ
+\DeclareTextSymbol{\CYRNJE}\UnicodeEncodingName{"040A}      % Њ
+\DeclareTextSymbol{\cyrnje}\UnicodeEncodingName{"045A}      % њ
+% Serbian:
+\DeclareTextSymbol{\CYRDJE}\UnicodeEncodingName{"0402}      % Ђ
+\DeclareTextSymbol{\cyrdje}\UnicodeEncodingName{"0452}      % ђ
+\DeclareTextSymbol{\CYRTSHE}\UnicodeEncodingName{"040B}     % Ћ
+\DeclareTextSymbol{\cyrtshe}\UnicodeEncodingName{"045B}     % ћ
+% Macedonian:
+\DeclareTextSymbol{\CYRDZE}\UnicodeEncodingName{"0405}      % Ѕ
+\DeclareTextSymbol{\cyrdze}\UnicodeEncodingName{"0455}      % ѕ
+\DeclareTextSymbol{\CYRGJE}\UnicodeEncodingName{"0403}      % Ѓ
+\DeclareTextSymbol{\cyrgje}\UnicodeEncodingName{"0453}      % ѓ
+\DeclareTextSymbol{\CYRKJE}\UnicodeEncodingName{"040C}      % Ќ
+\DeclareTextSymbol{\cyrkje}\UnicodeEncodingName{"045C}      % ќ
+
+%%% Part III
+%%% Non-Slavic Cyrillic letters, waiting for their experts
+%%% to be confirmed as correct.
+%%% From here on, we're out of the frequently used 8-bit land
+%%% and into mostly Unicode territory.
+
+% Azerbaijani-Abkhaz-Kalmyk-Kazakh-Tatar:
+\DeclareTextSymbol{\CYRSCHWA}\UnicodeEncodingName{"04D8}    % Ә
+\DeclareTextSymbol{\cyrschwa}\UnicodeEncodingName{"04D9}    % ә
+% Azerbaijani-Kyrgyz-Buryat-Kazakh-Tatar:
+\DeclareTextSymbol{\CYRSHHA}\UnicodeEncodingName{"04BA}     % Һ
+\DeclareTextSymbol{\cyrshha}\UnicodeEncodingName{"04BB}     % һ
+% Azerbaijani-Kyrgyz-Buryat-Kalmyk-Kazakh-Tatar:
+\DeclareTextSymbol{\CYROTLD}\UnicodeEncodingName{"04E8}     % Ө
+\DeclareTextSymbol{\cyrotld}\UnicodeEncodingName{"04E9}     % ө
+\DeclareTextSymbol{\CYRY}\UnicodeEncodingName{"04AE}        % Ү
+\DeclareTextSymbol{\cyry}\UnicodeEncodingName{"04AF}        % ү
+% Azerbaijani-Tajik-Kazakh-Uzbek:
+\DeclareTextSymbol{\CYRGHCRS}\UnicodeEncodingName{"0492}    % Ғ
+\DeclareTextSymbol{\cyrghcrs}\UnicodeEncodingName{"0493}    % ғ
+% Tajik-Abkhaz-Kazakh-Uzbek:
+\DeclareTextSymbol{\CYRKDSC}\UnicodeEncodingName{"049A}     % Қ
+\DeclareTextSymbol{\cyrkdsc}\UnicodeEncodingName{"049B}     % қ
+% Tajik-Abkhaz-Uzbek:
+\DeclareTextSymbol{\CYRHDSC}\UnicodeEncodingName{"04B2}     % Ҳ
+\DeclareTextSymbol{\cyrhdsc}\UnicodeEncodingName{"04B3}     % ҳ
+% Tajik-Abkhaz:
+\DeclareTextSymbol{\CYRCHRDSC}\UnicodeEncodingName{"04B6}   % Ҷ
+\DeclareTextSymbol{\cyrchrdsc}\UnicodeEncodingName{"04B7}   % ҷ
+% Kalmyk-Kyrguz-Tatar:
+\DeclareTextSymbol{\CYRNDSC}\UnicodeEncodingName{"04A2}     % Ң
+\DeclareTextSymbol{\cyrndsc}\UnicodeEncodingName{"04A3}     % ң
+% Kalmyk-Tatar:
+\DeclareTextSymbol{\CYRZHDSC}\UnicodeEncodingName{"0496}    % Җ
+\DeclareTextSymbol{\cyrzhdsc}\UnicodeEncodingName{"0497}    % җ
+% Ossetian:
+\DeclareTextSymbol{\CYRAE}\UnicodeEncodingName{"04D4}       % Ӕ
+\DeclareTextSymbol{\cyrae}\UnicodeEncodingName{"04D5}       % ӕ
+% Azerbaijani:
+\DeclareTextSymbol{\CYRCHVCRS}\UnicodeEncodingName{"04B8}   % Ҹ
+\DeclareTextSymbol{\cyrchvcrs}\UnicodeEncodingName{"04B9}   % ҹ
+\DeclareTextSymbol{\CYRKVCRS}\UnicodeEncodingName{"049C}    % Ҝ
+\DeclareTextSymbol{\cyrkvcrs}\UnicodeEncodingName{"049D}    % ҝ
+% Kazakh:
+\DeclareTextSymbol{\CYRYHCRS}\UnicodeEncodingName{"04B0}    % Ұ
+\DeclareTextSymbol{\cyryhcrs}\UnicodeEncodingName{"04B1}    % ұ
+% Abkhaz:
+\DeclareTextSymbol{\CYRGHK}\UnicodeEncodingName{"0494}      % Ҕ
+\DeclareTextSymbol{\cyrghk}\UnicodeEncodingName{"0495}      % ҕ
+\DeclareTextSymbol{\CYRABHDZE}\UnicodeEncodingName{"04E0}   % Ӡ
+\DeclareTextSymbol{\cyrabhdze}\UnicodeEncodingName{"04E1}   % ӡ
+\DeclareTextSymbol{\CYRKHCRS}\UnicodeEncodingName{"049E}    % Ҟ
+\DeclareTextSymbol{\cyrkhcrs}\UnicodeEncodingName{"049F}    % ҟ
+\DeclareTextSymbol{\CYRPHK}\UnicodeEncodingName{"04A6}      % Ҧ
+\DeclareTextSymbol{\cyrphk}\UnicodeEncodingName{"04A7}      % ҧ
+\DeclareTextSymbol{\CYRTDSC}\UnicodeEncodingName{"04AC}     % Ҭ
+\DeclareTextSymbol{\cyrtdsc}\UnicodeEncodingName{"04AD}     % ҭ
+\DeclareTextSymbol{\CYRTETSE}\UnicodeEncodingName{"04B4}    % Ҵ
+\DeclareTextSymbol{\cyrtetse}\UnicodeEncodingName{"04B5}    % ҵ
+\DeclareTextSymbol{\CYRABHCH}\UnicodeEncodingName{"04BC}    % Ҽ
+\DeclareTextSymbol{\cyrabhch}\UnicodeEncodingName{"04BD}    % ҽ
+\DeclareTextSymbol{\CYRABHCHDSC}\UnicodeEncodingName{"04BE} % Ҿ
+\DeclareTextSymbol{\cyrabhchdsc}\UnicodeEncodingName{"04BF} % ҿ
+\DeclareTextSymbol{\CYRABHHA}\UnicodeEncodingName{"04A8}    % Ҩ
+\DeclareTextSymbol{\cyrabhha}\UnicodeEncodingName{"04A9}    % ҩ
+% Chukchi:
+\DeclareTextSymbol{\CYRKHK}\UnicodeEncodingName{"04C3}      % Ӄ
+\DeclareTextSymbol{\cyrkhk}\UnicodeEncodingName{"04C4}      % ӄ
+\DeclareTextSymbol{\CYRNHK}\UnicodeEncodingName{"04C7}      % Ӈ
+\DeclareTextSymbol{\cyrnhk}\UnicodeEncodingName{"04C8}      % ӈ
+
+%% P.S. Tajik and Chuvash, while mentioned,
+%% have letters which are apparently missing and are NOT complete.
+
+%%% Part IV
+%%% Historical letters, needed to support old orthographies.
+\DeclareTextSymbol{\CYRYAT}\UnicodeEncodingName{"0462}      % Ѣ
+\DeclareTextSymbol{\cyryat}\UnicodeEncodingName{"0463}      % ѣ
+\DeclareTextSymbol{\CYRBYUS}\UnicodeEncodingName{"046A}     % Ѫ
+\DeclareTextSymbol{\cyrbyus}\UnicodeEncodingName{"046B}     % ѫ
+\DeclareTextSymbol{\CYRIZH}\UnicodeEncodingName{"0474}      % Ѵ
+\DeclareTextSymbol{\cyrizh}\UnicodeEncodingName{"0475}      % ѵ
+\DeclareTextSymbol{\CYRFITA}\UnicodeEncodingName{"0472}     % Ѳ
+\DeclareTextSymbol{\cyrfita}\UnicodeEncodingName{"0473}     % ѳ
+
+%%% Part V
+%%% UNRECOGNISED NON-SLAVIC CYRILLIC LETTERS
+%%% Belong to languages not mentioned herein.
+
+\DeclareTextSymbol{\CYRpalochka}\UnicodeEncodingName{"04C0} % Ӏ
+\DeclareTextSymbol{\CYRZDSC}\UnicodeEncodingName{"0498}     % Ҙ
+\DeclareTextSymbol{\cyrzdsc}\UnicodeEncodingName{"0499}     % ҙ
+\DeclareTextSymbol{\CYRKBEAK}\UnicodeEncodingName{"04A0}    % Ҡ
+\DeclareTextSymbol{\cyrkbeak}\UnicodeEncodingName{"04A1}    % ҡ
+\DeclareTextSymbol{\CYRNG}\UnicodeEncodingName{"04A4}       % Ҥ
+\DeclareTextSymbol{\cyrng}\UnicodeEncodingName{"04A5}       % ҥ
+\DeclareTextSymbol{\CYRSDSC}\UnicodeEncodingName{"04AA}     % Ҫ
+\DeclareTextSymbol{\cyrsdsc}\UnicodeEncodingName{"04AB}     % ҫ
+\DeclareTextSymbol{\CYRCHLDSC}\UnicodeEncodingName{"04CB}   % Ӌ
+\DeclareTextSymbol{\cyrchldsc}\UnicodeEncodingName{"04CC}   % ӌ
+
+%% These are probably improperly named either in TeX or Unicode,
+%% since their Unicode names and TeX names do not match.
+%% TeX definitely treats them as the same symbol though.
+\DeclareTextSymbol{\CYRMDSC}\UnicodeEncodingName{"04CD}     % Ӎ
+\DeclareTextSymbol{\cyrmdsc}\UnicodeEncodingName{"04CE}     % ӎ
+\DeclareTextSymbol{\CYRLDSC}\UnicodeEncodingName{"04C5}     % Ӆ
+\DeclareTextSymbol{\cyrldsc}\UnicodeEncodingName{"04C6}     % ӆ
+
+%% These two letters are part of proposed Unicode for Kurdish
+%% and their codepoints may or may not change upon inclusion.
+\DeclareTextSymbol{\CYRQ}\UnicodeEncodingName{"051A}
+\DeclareTextSymbol{\cyrq}\UnicodeEncodingName{"051B}
+\DeclareTextSymbol{\CYRW}\UnicodeEncodingName{"051C}
+\DeclareTextSymbol{\cyrw}\UnicodeEncodingName{"051D}
+
+%%% Part VII
+%%% PUNCTUATION AND UNCLEAR CASES
+%%% Exotic (punctuation, letters...)
+%%% (this list is probably incomplete)
+
+% A dash - Defined in cyrillic.mtx to be emdash
+% and should have been emdash all along.
+\DeclareTextSymbol{\cyrdash}\UnicodeEncodingName{"2014}
+
+% Exotic angle brackets.
+% Might still be unprintable for you.
+\DeclareTextSymbol{\cyrlangle}\UnicodeEncodingName{"27E8}
+\DeclareTextSymbol{\cyrrangle}\UnicodeEncodingName{"27E9}
+
+% This particular association is not certain but I guess
+% we'll hear about it when someone trips over it.
+\DeclareTextSymbol{\CYREPS}\UnicodeEncodingName{"0510}
+\DeclareTextSymbol{\cyreps}\UnicodeEncodingName{"0511}
+
+% Can't confirm those, but I'm positive the codepoints are correct:
+\DeclareTextSymbol{\CYRGDSC}\UnicodeEncodingName{"04F6}
+\DeclareTextSymbol{\cyrgdsc}\UnicodeEncodingName{"04F7}
+\DeclareTextSymbol{\CYRHHK}\UnicodeEncodingName{"04FC}
+\DeclareTextSymbol{\cyrhhk}\UnicodeEncodingName{"04FD}
+\DeclareTextSymbol{\CYRLHK}\UnicodeEncodingName{"0512}
+\DeclareTextSymbol{\cyrlhk}\UnicodeEncodingName{"0513}
+
+% I could not assign these in a way that would make sense,
+% since I couldn't find matches in cyrillic unicode table.
+
+%\DeclareTextSymbol{\CYRNLHK}\UnicodeEncodingName{"????}
+%\DeclareTextSymbol{\cyrnlhk}\UnicodeEncodingName{"????}
+%\DeclareTextSymbol{\CYRRDSC}\UnicodeEncodingName{"????}
+%\DeclareTextSymbol{\cyrrdsc}\UnicodeEncodingName{"????}
+
+% Oddities:
+% I don't see a letter like that in Unicode cyrillic table.
+% I've no idea what is it doing in a cyrillic encoding either.
+%\DeclareTextSymbol{\CYRDELTA}\UnicodeEncodingName{"????}
+%\DeclareTextSymbol{\cyrdelta}\UnicodeEncodingName{"????}
+
+% Quotes
+% Ligatures << and >> are working only with the last versions of "tex-text.map"
+% and "tex-text.tec" (http://scripts.sil.org/svn-view/xetex/TRUNK)
+%\DeclareTextSymbol{\flqq}\UnicodeEncodingName{"00AB}
+%\DeclareTextSymbol{\frqq}\UnicodeEncodingName{"00BB}
+%\DeclareTextSymbol{\glqq}\UnicodeEncodingName{"201E}
+%\DeclareTextSymbol{\grqq}\UnicodeEncodingName{"201C}
+
+% To make it (and "--- -like shortcuts) work, "xecyr" must be loaded _after_ babel.
+%\def\cyrdash{\hbox to.8em{--\hss--}}
+
+\endinput
