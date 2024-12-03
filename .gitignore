@@ -32,11 +32,11 @@
 *.xdy
 *.tdo
 *.pdf
-cv-blx.bib
-cv.run.xml
-cv.fls
-cv.texnicle
-cv.texnicle.backup
+*-blx.bib
+*.run.xml
+*.fls
+*.texnicle
+*.texnicle.backup
 
 # IDE files
 .idea/
