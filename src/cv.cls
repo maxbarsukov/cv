@@ -67,6 +67,24 @@
 % Define month + year format
 \newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
 
+% Russian month names
+\newcommand{\russiancurrentmonth}{%
+   \ifcase\month\or
+   Январь\or
+   Февраль\or
+   Март\or
+   Апрель\or
+   Май\or
+   Июнь\or
+   Июль\or
+   Август\or
+   Сентябрь\or
+   Октябрь\or
+   Ноябрь\or
+   Декабрь\fi
+}
+
+
 \ifundef{\@green} {
   \ifundef{\@red} {
     \ifundef{\@indigo}{
