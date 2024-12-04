@@ -263,6 +263,7 @@
 % Render author's github (optional)
 % Usage: \github{<github-nick>}
 \newcommand*{\github}[1]{\sociallink{\githubSymbol}{https://www.github.com/#1}{github.com/#1}}           % Github icon + URL
+\newcommand*{\githubcompact}[1]{\sociallink{\githubSymbol}{https://www.github.com/#1}{#1}}               % Github icon + URL
 
 % Render author's telegram (optional)
 % Usage: \telegram{<telegram-name>}
@@ -476,6 +477,16 @@
     #3\\
     #4\smallskip\\
     \footnotesize{\foreach \n in {#5}{\cvtag{\n}}}\\
+  \end{minipage}
+  \\*
+}
+
+\newcommand\projectoneline[5]{
+  \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
+    \textbf{#1} \hfill \hbox{\textsc{#2}}\smallskip\\
+    #3\\
+    #4\smallskip\\
+    \footnotesize{\hbox{\foreach \n in {#5}{\cvtag{\n}}}}\\
   \end{minipage}
   \\*
 }
