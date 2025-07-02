@@ -10,7 +10,7 @@
 SRC = src
 
 # Specify the names of the .tex files. They must be in SRC
-PROJECTS = cv-ruby.ru cv-java.ru
+PROJECTS = cv-ruby.ru cv-java.ru cv-ruby.en cv-java.en
 
 PROJECTS_PATHS = $(addprefix $(OUT)/, $(PROJECTS))
 PROJECTS_TARGETS = $(addsuffix .pdf, $(PROJECTS_PATHS))

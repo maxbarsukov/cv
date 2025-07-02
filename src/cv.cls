@@ -204,7 +204,7 @@
 \newcommand{\websiteSymbol}{\makebox[1.25em][l]{\faExternalLink*}}
 \newcommand{\telegramSymbol}{\fBox{Telegram}}
 
-\newcommand\link[2]{\color{linkcolor}\href{#1}{#2}\color{Black} }
+\newcommand\link[3][]{\ifstrempty{#1}{\color{linkcolor}}{ \color[HTML]{#1}}\href{#2}{#3}\color{Black} }
 \newcommand\important[1]{\textbf #1}
 
 % Create a tag
@@ -364,6 +364,15 @@
   \fancyfoot[R]{#3}
 }
 
+% Define a footer with non-visible ATS-keywords for CV
+% Usage: \makecvfooterwithkeywords{<left>}{<center>}{<right>}{<bottom>}
+\newcommand*{\makecvfooterwithkeywords}[4]{%
+  \fancyfoot{}
+  \fancyfoot[L]{#1 \\[2pt] \scriptsize {}}
+  \fancyfoot[C]{#2 \\[2pt] \scriptsize{\textcolor{white}{#4}}}
+  \fancyfoot[R]{#3 \\[2pt] \scriptsize {}}
+}
+
 % Resume part title definition
 \newcommand\sectionTitle[2]{\section{\texorpdfstring{\color{accentcolor}#2\enspace \textsc{#1}}{#1}}}
 
@@ -420,20 +429,21 @@
   \end{longtable}
 }
 
-% Render an experience in the experiences environment
+% Render an experience in the experiences environment with optional company logo
 % Usage:
 % \experience
 %  {<End date>}      {<Title>}{<Enterprise>}{<Country>}
-%  {<Start date}     {
+%  {<Start date>}    {
 %                      <Experience description (Could be a list)>
 %                    }
 %                    {<Technology list>}
-\newcommand\experience[7]{
-  \textbf{#1}    & \textbf{#2, \textsc{#3}}, #4   								\\*
-  \textbf{#5}    & \begin{minipage}[t]{\rightcolumnlength}
-  					         #6
-                   \end{minipage}										\\*
-                 & \footnotesize{\foreach \n in {#7}{\cvtag{\n}}} 	\\
+%                    [<Logo path>]  % Optional logo parameter
+\newcommand\experience[8][]{
+  \textbf{#2}    & \textbf{#3, \ifstrempty{#1}{}{\raisebox{-0.6ex}{\includegraphics[width=0.4cm]{#1}}\hspace{0.1em}} \textsc{#4}}, #5 \vspace{0.2em} \\*
+  \textbf{#6}    & \begin{minipage}[t]{\rightcolumnlength}
+                        #7
+                   \end{minipage}                                 \\*
+                 & \footnotesize{\foreach \n in {#8}{\cvtag{\n}}} \\
   }
 
 % Render a consultant experience in the experiences environment
