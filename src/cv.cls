@@ -439,7 +439,7 @@
 %                    {<Technology list>}
 %                    [<Logo path>]  % Optional logo parameter
 \newcommand\experience[8][]{
-  \textbf{#2}    & \textbf{#3, \ifstrempty{#1}{}{\raisebox{-0.6ex}{\includegraphics[width=0.4cm]{#1}}\hspace{0.1em}} \textsc{#4}}, #5 \vspace{0.2em} \\*
+  \textbf{#2}    & \textbf{#3, \ifstrempty{#1}{}{\raisebox{-0.6ex}{\includegraphics[width=0.4cm]{#1}}\hspace{-0.1em}} \textsc{#4}}, #5 \vspace{0.2em} \\*
   \textbf{#6}    & \begin{minipage}[t]{\rightcolumnlength}
                         #7
                    \end{minipage}                                 \\*
