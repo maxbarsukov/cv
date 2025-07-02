@@ -90,6 +90,6 @@ Everyone interacting in the **cv** project's codebases, issue trackers, chat roo
 ## License <a name="license"></a>
 
 The project is available as open source under the terms of the [LPPL-1.3c License](https://opensource.org/license/lppl). \
-*Copyright 2024 Max Barsukov*
+*Copyright 2025 Max Barsukov*
 
 **Leave a star :star: if you find this project useful.**
