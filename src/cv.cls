@@ -3,6 +3,7 @@
 \LoadClass[a4paper]{article}
 
 \newif\if@showLinks   \@showLinksfalse
+\newif\if@roundphoto  \@roundphotofalse   % photo shape: square by default, circle with the `roundphoto` option
 
 \DeclareOption{green}{
   \def\@green{green}
@@ -27,6 +28,7 @@
 }
 
 \DeclareOption{showLinks}{ \@showLinkstrue}
+\DeclareOption{roundphoto}{ \@roundphototrue}
 
 \ProcessOptions
 
@@ -315,7 +317,11 @@
 }
 
 \newcommand\idphoto{
-  \tikz\path[fill overzoom image={\@photo}]circle[radius=0.5\linewidth];
+  \if@roundphoto
+    \tikz\path[fill overzoom image={\@photo}]circle[radius=0.5\linewidth];
+  \else
+    \tikz\path[fill overzoom image={\@photo}](-0.5\linewidth,-0.5\linewidth) rectangle (0.5\linewidth,0.5\linewidth);
+  \fi
 }
 
 % Define social entries to print in header
