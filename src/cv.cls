@@ -185,24 +185,25 @@
 %%% -->
 % Font Awesome icons aliases
 
-\newcommand{\fBox}[1]{
-   \makebox[1.25em][l]{
+\newcommand{\fBox}[1]{%
+   \makebox[1.25em][c]{%
       \csname fa#1\endcsname
-   }
+   }%
 }
 \newcommand{\mailSymbol}{\fBox{At}}
 \newcommand{\locationSymbol}{\fBox{MapMarker}} % <--
 \newcommand{\infoSymbol}{\fBox{Info}}
 \newcommand{\linkedinSymbol}{\fBox{Linkedin}} % <--
 \newcommand{\viadeoSymbol}{\fBox{Viadeo}}
-\newcommand{\mobileSymbol}{\faMobile*}
+\newcommand{\mobileSymbol}{\makebox[1.25em][c]{\faMobile*}}
 \newcommand{\githubSymbol}{\fBox{Github}}
 \newcommand{\stackoverflowSymbol}{\fBox{StackOverflow}}
 \newcommand{\stackexchangeSymbol}{\fBox{StackExchange}}
 \newcommand{\mediumSymbol}{\fBox{Medium}}
 \newcommand{\bitbucketSymbol}{\fBox{Bitbucket}}
-\newcommand{\websiteSymbol}{\makebox[1.25em][l]{\faExternalLink*}}
+\newcommand{\websiteSymbol}{\makebox[1.25em][c]{\faExternalLink*}}
 \newcommand{\telegramSymbol}{\fBox{Telegram}}
+\newcommand{\habrcareerSymbol}{\makebox[1.25em][c]{\raisebox{-0.25em}{\includegraphics[height=1.2em]{img/logo/habr-career.pdf}}}}
 
 \newcommand\link[3][]{\ifstrempty{#1}{\color{linkcolor}}{ \color[HTML]{#1}}\href{#2}{#3}\color{Black} }
 \newcommand\important[1]{\textbf #1}
@@ -272,6 +273,10 @@
 % Render author's stackoverflow profile (optional)
 % Usage: \stackoverflow{<stackoverflow-user-id>}
 \newcommand*{\stackoverflow}[1]{\sociallink{\stackoverflowSymbol}{https://www.stackoverflow.com/u/#1}{stackoverflow.com/u/#1}}
+
+% Render author's Habr Career profile (optional)
+% Usage: \habrcareer{<habr-career-nick>}
+\newcommand*{\habrcareer}[1]{\sociallink{\habrcareerSymbol}{https://career.habr.com/#1}{career.habr.com/#1}}
 
 % Render author's stackexchange profile (optional)
 % Usage: \stackexchange{<stackexchange-user-id>}

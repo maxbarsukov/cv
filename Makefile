@@ -10,7 +10,12 @@
 SRC = src
 
 # Specify the names of the .tex files. They must be in SRC
-PROJECTS = cv-ruby.ru cv-java.ru cv-ruby.en cv-java.en
+# Active resumes (Java/Kotlin)
+PROJECTS = cv-java.ru cv-java.en
+
+# DEPRECATED (Ruby), no longer maintained, kept for reference.
+DEPRECATED_PROJECTS = cv-ruby.ru cv-ruby.en
+# PROJECTS += $(DEPRECATED_PROJECTS)
 
 PROJECTS_PATHS = $(addprefix $(OUT)/, $(PROJECTS))
 PROJECTS_TARGETS = $(addsuffix .pdf, $(PROJECTS_PATHS))
