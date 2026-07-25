@@ -22,6 +22,14 @@
 ## Updates <a name="updates"></a>
 
 <details open>
+  <summary><b>🔔 Jul. 25, 2026 (v0.2.0)</b></summary>
+
+> - Fill in work experience (MWS, ITMO) and projects.
+> - Rewrite the summary and refocus Hard Skills.
+> - New photo, Habr Career link, PDF metadata, and layout polish.
+</details>
+
+<details>
   <summary><b>🔔 Dec. 4, 2024 (v0.1.3)</b></summary>
 
 > - Add resume for `Ruby`.
@@ -71,9 +79,17 @@ Displays the compiled document in a common PDF viewer:
 
 ## Preview <a name="preview"></a>
 
-| Page. 1 |
-|:---:|
-| ![Resume](./docs/preview.png) |
+<details open>
+  <summary><b>Page 1</b></summary>
+
+![Resume — Page 1](./docs/preview-en-1.png)
+</details>
+
+<details>
+  <summary><b>Page 2</b></summary>
+
+![Resume — Page 2](./docs/preview-en-2.png)
+</details>
 
 
 ## Contributing <a name="contributing"></a>
@@ -90,6 +106,6 @@ Everyone interacting in the **cv** project's codebases, issue trackers, chat roo
 ## License <a name="license"></a>
 
 The project is available as open source under the terms of the [LPPL-1.3c License](https://opensource.org/license/lppl). \
-*Copyright 2025 Max Barsukov*
+*Copyright 2026 Max Barsukov*
 
 **Leave a star :star: if you find this project useful.**

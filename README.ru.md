@@ -22,6 +22,14 @@
 ## Обновления <a name="updates"></a>
 
 <details open>
+  <summary><b>🔔 25 июля 2026 (v0.2.0)</b></summary>
+
+> - Наполнены опыт работы (MWS, ИТМО) и проекты.
+> - Переписан summary, переработаны технические навыки.
+> - Новое фото, ссылка на Хабр Карьеру, метаданные PDF и правки вёрстки.
+</details>
+
+<details>
   <summary><b>🔔 4 декабря 2024 (v0.1.3)</b></summary>
 
 > - Добавлено резюме для `Ruby`.
@@ -72,9 +80,17 @@
 
 ## Предварительный просмотр <a name="preview"></a>
 
-| стр. 1 |
-|:---:|
-| ![Резюме](./docs/preview.png) |
+<details open>
+  <summary><b>Страница 1</b></summary>
+
+![Резюме — страница 1](./docs/preview-ru-1.png)
+</details>
+
+<details>
+  <summary><b>Страница 2</b></summary>
+
+![Резюме — страница 2](./docs/preview-ru-2.png)
+</details>
 
 
 ## Содействие <a name="contributing"></a>
@@ -91,6 +107,6 @@
 ## Лицензия <a name="license"></a>
 
 Проект доступен с открытым исходным кодом на условиях [Лицензии LPPL-1.3c](https://opensource.org/license/lppl). \
-*Авторские права 2025 Max Barsukov*
+*Авторские права 2026 Max Barsukov*
 
 **Поставьте звезду :star:, если вы нашли этот проект полезным.**
