@@ -43,6 +43,23 @@
 \RequirePackage[usenames,dvipsnames]{xcolor}
 \RequirePackage{fullpage}
 \RequirePackage[left=1.5cm,right=1.5cm,top=0.8cm,bottom=1.5cm]{geometry}
+% Keep decorative icon glyphs out of copied/extracted text.
+% FontAwesome's ToUnicode CMap maps each icon glyph to its NAME (e.g. "Github",
+% "Map-marker", "Angle-Right"), so selecting the CV and copying leaks those names
+% into the clipboard and into ATS parsers. Remap every FontAwesome glyph's
+% ToUnicode to a space so copy-paste yields nothing for the icons, in any viewer.
+% Must be registered BEFORE fontawesome5 loads its fonts, or the icon font
+% instances are already built and the patch misses them.
+\directlua{
+  luatexbase.add_to_callback("luaotfload.patch_font", function(tfmdata)
+    if tostring(tfmdata.psname):find("FontAwesome") then
+      for _, ch in next, (tfmdata.characters or {}) do
+        if type(ch) == "table" then ch.tounicode = "0020" end
+      end
+    end
+    return tfmdata
+  end, "hide_fontawesome_tounicode")
+}
 \RequirePackage{fontawesome5} % --> \RequirePackage[fixed]{fontawesome5}
 \RequirePackage{hyperref}
 \RequirePackage{lmodern}
