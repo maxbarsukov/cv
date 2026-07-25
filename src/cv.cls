@@ -122,6 +122,27 @@
   }%
 \fi
 
+% PDF metadata (Info dictionary).
+% Author is auto-derived from \name; title/subject/keywords are per-document
+% (set via \cvtitle/\cvsubject/\cvkeywords in the entry file). Creator is fixed;
+% Producer and Creation/Mod dates are filled automatically by the engine.
+\def\@cvtitle{\@firstname\ \@lastname}
+\def\@cvsubject{}
+\def\@cvkeywords{}
+\newcommand*{\cvtitle}[1]{\def\@cvtitle{#1}}
+\newcommand*{\cvsubject}[1]{\def\@cvsubject{#1}}
+\newcommand*{\cvkeywords}[1]{\def\@cvkeywords{#1}}
+\AtBeginDocument{%
+  \hypersetup{%
+    pdfencoding=auto,
+    pdfauthor={\@firstname\ \@lastname},
+    pdftitle={\@cvtitle},
+    pdfsubject={\@cvsubject},
+    pdfkeywords={\@cvkeywords},
+    pdfcreator={LuaLaTeX + hyperref},
+  }%
+}
+
 % Setup fancyhdr package
 \fancyhf{}
 \fancyhfoffset{0em}
@@ -391,7 +412,7 @@
 \newenvironment{keywords}{%
   \renewcommand{\arraystretch}{1.1}
 
-  \begin{tabular}{>{}r>{}p{13cm}}
+  \begin{tabular}{>{}r>{\raggedright\arraybackslash}p{13cm}}
 }{%
   \end{tabular}
 }
@@ -450,11 +471,12 @@
 %                    {<Technology list>}
 %                    [<Logo path>]  % Optional logo parameter
 \newcommand\experience[8][]{
-  \textbf{#2}    & \textbf{#3, \ifstrempty{#1}{}{\raisebox{-0.6ex}{\includegraphics[width=0.4cm]{#1}}\hspace{-0.1em}} \textsc{#4}}, #5 \vspace{0.2em} \\*
-  \textbf{#6}    & \begin{minipage}[t]{\rightcolumnlength}
+  \textbf{#2}    & \textbf{#3, \ifstrempty{#1}{}{\raisebox{-0.2em}{\includegraphics[height=0.95em]{#1}}} \textsc{#4}}, #5 \vspace{0.2em} \\*
+  \textbf{#6}    & \begin{minipage}[t]{\rightcolumnlength}\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
                         #7
-                   \end{minipage}                                 \\*
-                 & \footnotesize{\foreach \n in {#8}{\cvtag{\n}}} \\
+                   \end{minipage}%
+  \ifstrempty{#8}{\\}{                                            \\*
+                 & \footnotesize{\foreach \n in {#8}{\cvtag{\n}}} \\}%
   }
 
 % Render a consultant experience in the experiences environment
