@@ -1,4 +1,4 @@
-\ProvidesClass{cv}[2024/10/11  v0.1.2 'Max Barsukov CV' Class]
+\ProvidesClass{cv}[2026/07/25  v0.2.0 'Max Barsukov CV' Class]
 
 \LoadClass[a4paper]{article}
 
